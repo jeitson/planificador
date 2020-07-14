@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49F513E2-4F39-42D4-A87A-E2ED4CB1206E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>reingenia.planificador.core</RootNamespace>
+    <AssemblyName>reingenia.planificador.core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="application\ApplicationController.cs" />
+    <Compile Include="application\ApplicationInstance.cs" />
+    <Compile Include="businessentity\_base\Version.cs" />
+    <Compile Include="businesslogic\Audit.cs" />
+    <Compile Include="businesslogic\Authentication.cs" />
+    <Compile Include="businesslogic\Group.cs" />
+    <Compile Include="businesslogic\GroupUser.cs" />
+    <Compile Include="businesslogic\Ldap.cs" />
+    <Compile Include="businesslogic\LdapConfiguration.cs" />
+    <Compile Include="businesslogic\log.Exception.cs" />
+    <Compile Include="businesslogic\Permission.cs" />
+    <Compile Include="businesslogic\Role.cs" />
+    <Compile Include="businesslogic\RoleAccess.cs" />
+    <Compile Include="businesslogic\RolePermission.cs" />
+    <Compile Include="businesslogic\security.User.cs" />
+    <Compile Include="businesslogic\security.UserAuthentication.cs" />
+    <Compile Include="businesslogic\security.UserSession.cs" />
+    <Compile Include="data\access\configuration.OptionList.cs" />
+    <Compile Include="data\access\configuration.Parameter.cs" />
+    <Compile Include="businessentity\configuration.Parameter.cs" />
+    <Compile Include="businessentity\configuration.OptionList.cs" />
+    <Compile Include="businessentity\security.Menu.cs" />
+    <Compile Include="businessentity\security.Level.cs" />
+    <Compile Include="businessentity\security.Entity.cs" />
+    <Compile Include="businessentity\security.PermissionEntity.cs" />
+    <Compile Include="businessentity\security.PermissionRole.cs" />
+    <Compile Include="businessentity\security.RoleUser.cs" />
+    <Compile Include="businessentity\_base\Base.cs" />
+    <Compile Include="data\mapper\configuration.Parameter.cs" />
+    <Compile Include="data\mapper\configuration.OptionList.cs" />
+    <Compile Include="data\mapper\security.Group.cs" />
+    <Compile Include="data\mapper\security.Level.cs" />
+    <Compile Include="data\mapper\security.Menu.cs" />
+    <Compile Include="data\mapper\security.Entity.cs" />
+    <Compile Include="data\mapper\security.RoleUser.cs" />
+    <Compile Include="interface\configuration.OptionList.cs" />
+    <Compile Include="interface\configuration.Parameter.cs" />
+    <Compile Include="interface\log.Audit.cs" />
+    <Compile Include="interface\Authentication.cs" />
+    <Compile Include="interface\security.Group.cs" />
+    <Compile Include="interface\security.Permission.cs" />
+    <Compile Include="interface\security.Entity.cs" />
+    <Compile Include="interface\log.Exception.cs" />
+    <Compile Include="interface\security.Level.cs" />
+    <Compile Include="interface\security.PermissionEntity.cs" />
+    <Compile Include="interface\security.RoleUser.cs" />
+    <Compile Include="interface\security.Role.cs" />
+    <Compile Include="interface\security.Menu.cs" />
+    <Compile Include="interface\security.PermissionRole.cs" />
+    <Compile Include="interface\security.User.cs" />
+    <Compile Include="interface\security.UserAuthentication.cs" />
+    <Compile Include="interface\security.UserSession.cs" />
+    <Compile Include="library\Base.cs" />
+    <Compile Include="security\Identity.cs" />
+    <Compile Include="security\Principal.cs" />
+    <Compile Include="security\Session.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="data\access\log.Audit.cs" />
+    <Compile Include="data\access\security.Group.cs" />
+    <Compile Include="data\access\log.Exception.cs" />
+    <Compile Include="data\access\_base\Manager.cs" />
+    <Compile Include="data\access\PermissionDao.cs" />
+    <Compile Include="data\access\_base\ReadOnlyRepository.cs" />
+    <Compile Include="data\access\_base\Repository.cs" />
+    <Compile Include="data\access\RoleAccessDao.cs" />
+    <Compile Include="data\access\RoleDao.cs" />
+    <Compile Include="data\access\security.UserAuthentication.cs" />
+    <Compile Include="data\access\security.User.cs" />
+    <Compile Include="data\access\security.UserSession.cs" />
+    <Compile Include="data\access\ViewPermissionDao.cs" />
+    <Compile Include="data\context\Context.cs" />
+    <Compile Include="data\mapper\log.Audit.cs" />
+    <Compile Include="data\mapper\log.Exception.cs" />
+    <Compile Include="data\mapper\security.Permission.cs" />
+    <Compile Include="data\mapper\security.PermissionEntity.cs" />
+    <Compile Include="data\mapper\security.Role.cs" />
+    <Compile Include="data\mapper\security.PermissionRole.cs" />
+    <Compile Include="data\mapper\security.UserAuthentication.cs" />
+    <Compile Include="data\mapper\security.User.cs" />
+    <Compile Include="data\mapper\security.UserSession.cs" />
+    <Compile Include="data\mapper\ViewPermissionMapper.cs" />
+    <Compile Include="businessentity\log.Audit.cs" />
+    <Compile Include="businessentity\security.Group.cs" />
+    <Compile Include="businessentity\_base\ListEntity.cs" />
+    <Compile Include="businessentity\log.Exception.cs" />
+    <Compile Include="businessentity\_base\Pagination.cs" />
+    <Compile Include="businessentity\security.Permission.cs" />
+    <Compile Include="businessentity\_base\PermissionsCode.cs" />
+    <Compile Include="businessentity\_base\RoleCode.cs" />
+    <Compile Include="businessentity\security.Role.cs" />
+    <Compile Include="businessentity\_base\SearchExpression.cs" />
+    <Compile Include="businessentity\security.UserAuthentication.cs" />
+    <Compile Include="businessentity\security.User.cs" />
+    <Compile Include="businessentity\security.UserSession.cs" />
+    <Compile Include="businessentity\ViewPermissionInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="library\cache\MemoryCacheExtension.cs" />
+    <Compile Include="library\convert\Encryption.cs" />
+    <Compile Include="library\convert\EnumConvert.cs" />
+    <Compile Include="library\convert\JsonSerializer.cs" />
+    <Compile Include="library\exception\AuthenticationException.cs" />
+    <Compile Include="library\exception\DataAccessException.cs" />
+    <Compile Include="library\exception\ExceptionHandler.cs" />
+    <Compile Include="library\exception\ExceptionValidation.cs" />
+    <Compile Include="library\extension\IQueryableExt.cs" />
+    <Compile Include="library\extension\StringExt.cs" />
+    <Compile Include="library\interceptor\MethodTrace.cs" />
+    <Compile Include="library\validation\BaseValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="Unity.Abstractions, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Abstractions.5.11.1\lib\net47\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Container.5.11.1\lib\net47\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.5.11.1\lib\net47\Unity.Interception.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

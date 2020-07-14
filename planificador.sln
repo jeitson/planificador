@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{D1021327-E16A-4A83-A4B4-4E21F3287B8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reingenia.planificador.core", "reingenia.planificador.core\reingenia.planificador.core.csproj", "{49F513E2-4F39-42D4-A87A-E2ED4CB1206E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "frontend", "frontend", "{CD3EB5B1-E764-4D54-875F-746272A44683}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "reingenia.planificador.dto", "reingenia.planificador.dto\reingenia.planificador.dto.csproj", "{F31D6D0B-FD87-4D70-8224-E5061F582C8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reingenia.planificador.webadmin", "reingenia.planificador.webadmin\reingenia.planificador.webadmin.csproj", "{B759C227-DFB8-4186-98EB-2B378DD876A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reingenia.planificador.webapi", "reingenia.planificador.webapi\reingenia.planificador.webapi.csproj", "{E892DAE5-3DB0-4F49-BD01-48C98182D9AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49F513E2-4F39-42D4-A87A-E2ED4CB1206E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F513E2-4F39-42D4-A87A-E2ED4CB1206E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F513E2-4F39-42D4-A87A-E2ED4CB1206E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F513E2-4F39-42D4-A87A-E2ED4CB1206E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31D6D0B-FD87-4D70-8224-E5061F582C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31D6D0B-FD87-4D70-8224-E5061F582C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31D6D0B-FD87-4D70-8224-E5061F582C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31D6D0B-FD87-4D70-8224-E5061F582C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B759C227-DFB8-4186-98EB-2B378DD876A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B759C227-DFB8-4186-98EB-2B378DD876A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B759C227-DFB8-4186-98EB-2B378DD876A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B759C227-DFB8-4186-98EB-2B378DD876A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E892DAE5-3DB0-4F49-BD01-48C98182D9AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E892DAE5-3DB0-4F49-BD01-48C98182D9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E892DAE5-3DB0-4F49-BD01-48C98182D9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E892DAE5-3DB0-4F49-BD01-48C98182D9AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{49F513E2-4F39-42D4-A87A-E2ED4CB1206E} = {D1021327-E16A-4A83-A4B4-4E21F3287B8A}
+		{F31D6D0B-FD87-4D70-8224-E5061F582C8E} = {CD3EB5B1-E764-4D54-875F-746272A44683}
+		{B759C227-DFB8-4186-98EB-2B378DD876A8} = {CD3EB5B1-E764-4D54-875F-746272A44683}
+		{E892DAE5-3DB0-4F49-BD01-48C98182D9AD} = {CD3EB5B1-E764-4D54-875F-746272A44683}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {336ED6F9-F819-4CCE-8540-3856E584CDF8}
+	EndGlobalSection
+EndGlobal

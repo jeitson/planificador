@@ -1,0 +1,94 @@
+﻿@using reingenia.planificador.webadmin.Resources
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie6 no-js" lang="en"><![endif]-->
+<!--[if IE 7]><html class="ie7 no-js" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+    <head>
+        <title>@HttpUtility.HtmlDecode(webadmin.sistema_nombre)</title>
+        <meta charset="utf-8" />
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge, IE=9, IE=8, IE=7, chrome=1" /><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="description" content="@HttpUtility.HtmlDecode(webadmin.sistema_descripcion)" />
+        <meta name="author" content="@ViewBag.Autor" />
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/plugins/bootstrap/css/bootstrap.min.css")" />
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/plugins/font.google/font-google.min.css")" />
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/plugins/font.awesome/css/font-awesome.min.css")" />
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/plugins/font.clipone/clip-font.min.css")" />
+        <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/plugins/font.awesome/css/font-awesome-ie7.min.css")" />
+        <![endif]-->
+        @RenderSection("css", required: false)
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/css/main.min.css")" />
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/css/main-responsive.min.css")" />
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/css/theme-light.min.css")" />
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/css/custom.css")" />
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/modernizr/modernizr-2.8.3.min.js")"></script>
+        <link rel="shortcut icon" href="@Url.Content("~/favicon.ico")" type="image/x-icon" />
+        <link rel="icon" href="@Url.Content("~/favicon.ico")" type="image/x-icon" />
+    </head>
+    <body class="footer-fixed">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><span class="clip-list-2"></span></button>
+                    <a href="@Url.Action("Index", "Home", new { area = "" })"><img src="@Url.Content("~/Content/images/logo.home.png")" /></a>
+                </div>
+                <div class="navbar-tools">
+                    <ul class="nav navbar-right" style="margin-right: 0px;">
+                        @Html.Partial("~/Views/Shared/_UserOptions.cshtml")
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="navbar-content">
+                <div class="main-navigation navbar-collapse collapse">
+                    <div class="navigation-toggler"><i class="clip-chevron-left"></i><i class="clip-chevron-right"></i></div>
+                    <div id="systemoptions">
+                        @Html.Partial("~/Views/Shared/_SystemOptions.cshtml")
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="container">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <div class="footer clearfix">
+            <div class="footer-inner" style="margin-top: 4px;">@DateTime.Today.Year &copy; @HttpUtility.HtmlDecode(webadmin.sistema_empresa) por @ViewBag.Autor</div>
+            <div class="footer-items"><span class="go-top"><i class="clip-chevron-up"></i></span></div>
+        </div>
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/respond/respond.min.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/excanvas/excanvas.min.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/jquery/jquery-1.12.4.min.js")"></script>
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/jquery/jquery-3.3.1.min.js")"></script>
+        <!--<![endif]-->
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/bootstrap/js/bootstrap.min.js")"></script>
+        @RenderSection("jsPlugins", required: false)
+        <script type="text/javascript" src="@Url.Content("~/Content/js/main.min.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Content/js/custom.min.js")"></script>
+        @RenderSection("jsCustom", required: false)
+        <script>
+            $(document).ready(function ()
+            {
+                Main.init();
+                @*jsCustom.item.titleDelete = '@HttpUtility.HtmlDecode(info.form_titleborrar)';
+                jsCustom.item.messageDelete = '@HttpUtility.HtmlDecode(info.form_messageborrar)';
+                jsCustom.item.titleDisabled = '@HttpUtility.HtmlDecode(info.form_titledeshabilitar)';
+                jsCustom.item.messageDisabled = '@HttpUtility.HtmlDecode(info.form_messagedeshabilitar)';*@
+                jsCustom.Default.init();
+                @RenderSection("runJS", required: false)
+            });
+        </script>
+    </body>
+</html>

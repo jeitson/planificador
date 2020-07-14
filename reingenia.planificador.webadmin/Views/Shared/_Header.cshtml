@@ -1,0 +1,23 @@
+﻿@model string
+<div class="col-md-@(Model)">
+    @if (ViewBag.ActionHeader != null)
+    {
+        <ol class="breadcrumb">
+            @if (!(string.IsNullOrEmpty(ViewBag.PackageName)))
+            {
+                <li style="padding-top: 4px;">@Html.Raw(string.IsNullOrEmpty(ViewBag.PackageIcon) ? "" : "<i class='" + HttpUtility.HtmlDecode(ViewBag.PackageIcon) + "'></i>")&nbsp;&nbsp;@HttpUtility.HtmlDecode(ViewBag.PackageName)</li>
+            }
+            @if (!(string.IsNullOrEmpty(ViewBag.OptionName)))
+            {
+                <li class="active" style="padding-top: 4px;">
+                    @Html.Raw(string.IsNullOrEmpty(ViewBag.OptionIcon) ? "" : "<i class='" + HttpUtility.HtmlDecode(ViewBag.OptionIcon) + "'></i>")&nbsp;
+                    @(string.IsNullOrEmpty(ViewBag.OptionURL) ? HttpUtility.HtmlDecode(ViewBag.OptionName) : Html.Raw("<a href='#' id='urlHeaderIndex' class='btnURL' data-url='" + HttpUtility.HtmlDecode(ViewBag.OptionURL) + "' style='text-decoration: none' title='Ir a " + HttpUtility.HtmlDecode(ViewBag.OptionName).ToLower() + "'>" + HttpUtility.HtmlDecode(ViewBag.OptionName) + "</a>"))
+                </li>
+            }
+            @if (!(string.IsNullOrEmpty(ViewBag.ActionName)))
+            {
+                <li style="padding-top: 4px;">@Html.Raw(string.IsNullOrEmpty(ViewBag.ActionIcon) ? "" : "<i class='" + HttpUtility.HtmlDecode(ViewBag.ActionIcon) + "'></i>")&nbsp;&nbsp;@HttpUtility.HtmlDecode(ViewBag.ActionName)</li>
+            }
+        </ol>
+    }
+</div>

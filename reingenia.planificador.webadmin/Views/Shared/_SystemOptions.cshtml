@@ -1,0 +1,40 @@
+﻿@*@if (Request.IsAuthenticated)
+{
+    var lstBE = ApplicationUserAuthorized.getSystemOptions(User.Identity.getId(), User.Identity.getToken(), ViewBag.PackageName, ViewBag.OptionName);
+    
+    <ul class="main-navigation-menu">
+        @foreach (var parent in lstBE)
+        {
+            if (parent.lstItems.Count > 0)
+            {
+                <li @Html.Raw(parent.isactive ? " class='active open'" : "")>
+                    <a href="@(string.IsNullOrEmpty(parent.lstItems[0].url) ? Url.Action(parent.lstItems[0].actionname, parent.lstItems[0].controllername, new { area = parent.lstItems[0].areaname }) : parent.lstItems[0].url)">
+                        <i class="@parent.icon"></i>
+                        <span class="title"> @parent.lstItems[0].name </span>@Html.Raw(parent.lstItems.Count > 1 ? "<i class='icon-arrow'></i>" : "")
+                        <span class="selected"></span>
+                    </a>
+                    @if (parent.lstItems.Count > 1)
+                    {
+                        var intItem = 0;
+
+                        <ul class="sub-menu">
+                            @foreach (var child in parent.lstItems)
+                            {
+                                if (intItem != 0)
+                                {
+                                    <li @Html.Raw(child.disable ? "" : "class='active'")>
+                                        <a href="@(Url.Action(child.actionname, child.controllername, new { area = child.areaname }) + (string.IsNullOrEmpty(child.parameter) ? "" : "?" + child.parameter) )">
+                                            <span class="title"> @child.name </span>
+                                        </a>
+                                    </li>
+                                }
+
+                                intItem++;
+                            }
+                        </ul>
+                    }
+                </li>
+            }
+        }
+    </ul>
+}*@

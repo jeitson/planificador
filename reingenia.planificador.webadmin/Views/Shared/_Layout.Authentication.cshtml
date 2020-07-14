@@ -1,0 +1,61 @@
+﻿@using reingenia.planificador.webadmin.Resources
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie6 no-js" lang="en"><![endif]-->
+<!--[if IE 7]><html class="ie7 no-js" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+    <head>
+        <title>@HttpUtility.HtmlDecode(webadmin.sistema_nombre)</title>
+        <meta charset="utf-8" />
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge, IE=9, IE=8, IE=7, chrome=1" /><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="description" content="@HttpUtility.HtmlDecode(webadmin.sistema_descripcion)" />
+        <meta name="author" content="@ViewBag.Autor" />
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/plugins/bootstrap/css/bootstrap.min.css")" />
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/plugins/font.google/font-google.min.css")" />
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/plugins/font.awesome/css/font-awesome.min.css")" />
+        <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/plugins/font.awesome/css/font-awesome-ie7.min.css")" />
+        <![endif]-->
+        @RenderSection("css", required: false)
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/css/authentication.main.min.css")" />
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/modernizr/modernizr-2.8.3.min.js")"></script>
+        <link rel="shortcut icon" href="@Url.Content("~/favicon.ico")" type="image/x-icon" />
+        <link rel="icon" href="@Url.Content("~/favicon.ico")" type="image/x-icon" />
+    </head>
+    <body class="login black">
+        <div class="main-login col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+            <div class="logo"></div>
+            @RenderBody()
+            <div class="copyright" style="margin-top: 5px;">
+                @DateTime.Today.Year &copy; @HttpUtility.HtmlDecode(webadmin.sistema_empresa)<br />@ViewBag.Autor
+            </div>
+        </div>
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/respond/respond.min.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/excanvas/excanvas.min.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/jquery/jquery-1.12.4.min.js")"></script>
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/jquery/jquery-3.3.1.min.js")"></script>
+        <!--<![endif]-->
+        <script type="text/javascript" src="@Url.Content("~/Content/plugins/bootstrap/js/bootstrap.min.js")"></script>
+        @RenderSection("jsPlugins", required: false)
+        <script type="text/javascript" src="@Url.Content("~/Content/js/authentication.main.min.js")"></script>
+        @RenderSection("jsCustom", required: false)
+        <script>
+            $(document).ready(
+                function ()
+                {
+                    Main.init();
+                    @RenderSection("runJS", required: false)
+                }
+            );
+        </script>
+    </body>
+</html>

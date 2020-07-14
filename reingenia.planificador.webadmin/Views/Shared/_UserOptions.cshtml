@@ -1,0 +1,57 @@
+﻿@using Microsoft.AspNet.Identity
+@using reingenia.planificador.webadmin.Resources
+@*@using reingenia.agendacomercial.web.proxyAG
+@using reingenia.agendacomercial.resources*@
+@if (Request.IsAuthenticated)
+{
+    //List<bePermiso> lstBE = ApplicationUserAuthorized.getAuthorizedList(User.Identity.getId(), User.Identity.getToken(), "Seguridad", "Usuario");
+    //bool isChangeYourPassword = lstBE.Any(m => m.accion.Equals("ChangeYourPassword"));
+    //bool isMyProfile = lstBE.Any(m => m.accion.Equals("MyProfile"));
+
+    <li class="dropdown current-user">
+        <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+            @*@if (!(string.IsNullOrEmpty(User.Identity.getImage())))
+            {*@
+                @*<img src="@Url.Content("~/Content/files/usuario/")@("small_" + User.Identity.getImage())" class="circle-img" alt="" />*@
+            @*}*@
+            <span class="username">&nbsp;@(User.Identity.GetUserName())</span>
+            <i class="clip-chevron-down"></i>
+        </a>
+        <ul class="dropdown-menu">
+            @*@if (isChangeYourPassword)
+            {*@
+                <li>
+                    <a href="javascript:void(0)" class="btnURL" data-url="@Url.Action("ChangeYourPassword", "Usuario", new { area = "Seguridad" })">
+                        <i class="fa fa-key"></i>
+                        &nbsp;@HttpUtility.HtmlDecode(webadmin.useroptions_cambiarpassword)
+                    </a>
+                </li>
+            @*}
+            @if (isMyProfile)
+            {*@
+                <li>
+                    <a href="javascript:void(0)" class="btnURL" data-url="@Url.Action("MyProfile", "Usuario", new { area = "Seguridad" })">
+                        <i class="fa fa-key"></i>
+                        &nbsp;@HttpUtility.HtmlDecode(webadmin.useroptions_miperfil)
+                    </a>
+                </li>
+            @*}
+            @if (isChangeYourPassword || isMyProfile)
+            {*@
+                <li class="divider" style="margin-top: 1px; margin-bottom: 1px;"></li>
+            @*}*@
+            <li>
+                <a href="javascript:void(0)" class="btnForm" data-form="logoutForm">
+                    <i class="clip-exit"></i>
+                    &nbsp;@HttpUtility.HtmlDecode(webadmin.useroptions_cerrarsesion)
+                </a>
+            </li>
+        </ul>
+    </li>
+    <div class="no-display">
+        @using (Html.BeginForm("Logout", "Authentication", new { area = "" }, FormMethod.Post, new { id = "logoutForm" }))
+        {
+            @Html.AntiForgeryToken()
+        }
+    </div>
+}

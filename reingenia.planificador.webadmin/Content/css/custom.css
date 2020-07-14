@@ -1,0 +1,403 @@
+﻿/* table */
+.table th 
+{
+    background-color: darkgray;
+    color: white;
+    font-weight: bold;
+}
+
+.table > tbody > tr > td
+{
+    vertical-align: middle;
+}
+
+.dtLeft
+{
+    text-align: left;
+}
+
+.dtRight
+{
+    text-align: right;
+}
+
+.dtCenter
+{
+    text-align: center;
+}
+
+/* select2 */
+[class^='select2'] 
+{
+    border-radius: 0px !important;
+}
+
+.select2-container .select2-selection 
+{
+    height: 34px;
+    padding-top: 2px;
+}
+
+/* select2 disabled*/
+.disabled-select 
+{
+    background-color: #d5d5d5;
+    opacity: 0.5;
+    border-radius: 3px;
+    cursor: not-allowed;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container 
+{
+    pointer-events: none;
+    touch-action: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection 
+{
+    background: #eee;
+    box-shadow: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__arrow,
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__clear 
+{
+    display: none;
+}
+
+/* form */
+.labelForm 
+{
+    color: black !important;
+    font-weight: 600 !important;
+}
+
+.textForm 
+{
+    color: #262626 !important;
+    font-weight: normal !important;
+}
+
+/* placeholder form */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #d9d9d9 !important;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #d9d9d9 !important;
+    opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #d9d9d9 !important;
+    opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #d9d9d9 !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #d9d9d9 !important;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+    color: #d9d9d9 !important;
+}
+
+/********************/
+.headerOver
+{
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.headerTitle
+{
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.panelOver
+{
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 10px;
+}
+
+.panelInner 
+{
+    margin-bottom: 5px;
+}
+
+.panelHead
+{
+    padding-left: 10px;
+}
+
+.panelBody
+{
+    padding: 5px;
+}
+
+.panelBodyData
+{
+    padding: 5px;
+}
+
+.showBox 
+{
+    padding: 3px;
+}
+
+.editBox
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.editGroup
+{
+    margin-bottom: 0px;
+}
+
+.inputTextArea {
+    overflow: hidden;
+    word-wrap: break-word;
+    resize: none;
+    height: 150px !important;
+    padding: 5px;
+}
+
+.inputTextAreaCustom
+{
+    overflow: hidden;
+    word-wrap: break-word;
+    resize: none;
+    padding: 5px;
+}
+
+.iCheckInLine 
+{
+    margin-bottom: 5px !important
+}
+
+.hrLine
+{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.hrLineInner 
+{
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+.hTitle 
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* index */
+.breadcrumbCreate
+{
+    padding-top: 8px;
+    padding-right: 15px;
+}
+
+.indexHeader
+{
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* search modal*/
+.searchBody
+{
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.modalForm
+{
+    padding: 5px 8px 5px 8px;
+}
+
+.modal-header
+{
+    background-color: gainsboro;
+}
+
+.table-hover > tbody > tr:hover 
+{
+    background: #CCE7E7 !important;
+    cursor: pointer;
+}
+
+.table-nopointer > tbody > tr:hover 
+{
+    background: #CCE7E7 !important;
+}
+
+/****************************/
+.spanHover
+{
+    color: #337ab7; 
+    font-weight: lighter;
+}
+
+.spanNone 
+{
+    
+}
+/****************************/
+@media (min-width: 1281px) {
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .columnaUnidadComercialModiPor, .columnaUnidadComercialFechaModi,
+    .columnaListaConfiguracionModiPor, .columnaListaConfiguracionFechaModi {
+        display: none;
+    }
+
+    .showConfiguracionEtiquetaOrden, .editConfiguracionEtiquetaOrden {
+        width: 50% !important;
+    }
+
+    .showConfiguracionEtiquetaNombre, .showConfiguracionEtiquetaListaMarketing,
+    .showConfiguracionEtiquetaTipoActividad, .showConfiguracionEtiquetaObservacion,
+    .editConfiguracionEtiquetaListaMarketing, .editConfiguracionEtiquetaTipoActividad,
+    .editConfiguracionEtiquetaObservacion {
+        width: 90% !important;
+    }
+    .showConfiguracionEtiquetaObservacion, .editConfiguracionEtiquetaObservacion {
+        padding-left: 10px;
+    }   
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .columnaClienteEstadoResponsive, .columnaClienteFechaModiResponsive, .columnaClienteModificadoPorResponsive,
+    .columnaProspecFechaModiResponsive, .columnaProspecModiPorResponsive, .columnActividadesTotal, .columnActividadesRetroalimentadas,
+    .columnaActividadesListaEstado, .columnaActividadesListaFechaVenc, .columnaActividadesListaTipo, .columnaEtiquetaModiPor, .columnaEtiquetaFechaModi,
+    .columnaConfiguracionEtiquetaModiPor, .columnaConfiguracionEtiquetaFechaModi,
+    .columnaUnidadComercialModiPor, .columnaUnidadComercialFechaModi,
+    .columnaListaConfiguracionModiPor, .columnaListaConfiguracionFechaModi, .columnaListaConfiguracionEstado, .columnaListaConfiguracionTipoGestion,
+    .columnaFeriadoModiPor, .columnaFeriadoFechaModi, .columnaFeriadoEstado,
+    .columnaUbigeoFechaModi, .columnaUbigeoModiPor,
+    .columnaSedeEstado, .columnaSedeFechaModi, .columnaSedeModiPor,
+    .columnaSedeDistribucionEstado, .columnaSedeDistribucionFechaModi, .columnaSedeDistribucionModiPor,
+    .columnaAreaGestionEstado,
+    .columnaAsesorModiPor, .columnaAsesorFechaModi, .columnaAsesorEstado,
+    .columnaAsesorCalendarioModiPor, .columnaAsesorCalendarioFechaModi, .columnaAsesorCalendarioEstado,
+    .columnaProductoModiPor, .columnaProductoFechaModi, .columnaProductoEstado,
+    .columnaZonaGestionModiPor, .columnaZonaGestionFechaModi, .columnaZonaGestionEstado,
+    .columnaRolModiPor, .columnaRolFechaModi, .columnaRolEstado,
+    .columnaPermisoEstado, .columnaPermisoFechaModi, .columnaPermisoModiPor,
+    .columnaMenuEstado, .columnaMenuFechaModi, .columnaMenuModiPor,
+    .columnaUsuarioEstado, .columnaUsuarioFechaModi, .columnaUsuarioModiPor {
+        display: none;
+    }
+    .showClientePasAh {
+        font-size: 10px;
+    }
+    .columnaProspec, .columnActividades, .columnaActividadesLista, .columnaConfiguracionEtiqueta, .columnaUnidadComercial, .columnaListaConfiguracion,
+    .columnaFeriado, .columnaUbigeo, .columnaSede, .columnaSedeDistribucion, .columnaAreaGestion, .columnaAsesor, .columnaAsesorCalendario,
+    .columnaProducto, .columnaZonaGestion, .columnaRol, .columnaPermiso, .columnaMenu, .columnaUsuario {
+        font-size: 11px;
+    }
+    .showConfiguracionEtiquetaOrden, .editConfiguracionEtiquetaOrden {
+        width: 50% !important;
+    }
+    .showConfiguracionEtiquetaNombre, .showConfiguracionEtiquetaListaMarketing,
+    .showConfiguracionEtiquetaTipoActividad, .showConfiguracionEtiquetaObservacion,
+    .editConfiguracionEtiquetaListaMarketing, .editConfiguracionEtiquetaTipoActividad,
+    .editConfiguracionEtiquetaObservacion {
+        width: 90% !important;
+    }
+    .showConfiguracionEtiquetaObservacion, .editConfiguracionEtiquetaObservacion {
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 399px) and (max-width: 480px) {
+    .editUnidadComercialEstado {
+        width: 100% !important;
+    }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .columnaClienteTipoDocResponsive, .columnaClienteEstadoResponsive, .columnaClienteFechaModiResponsive, .columnaClienteModificadoPorResponsive,
+    .showClienteDireccionTipo, .showClienteDireccionCla, .showClienteActDetTipo, .showClienteActConTipo, .showClientePasConTipo,
+    .showClientePasAhTipo, .showClientePasPFTipo, .showClientePasSegTipo, .showClienteCanalTipo, .columnaProspecEstadoResponsive, .columnaProspecFechaModiResponsive,
+    .columnaProspecModiPorResponsive, .columnActividadesNoGestionadas, .columnActividadesGestionadas, .columnActividadesRetroalimentadas,
+    .columnaActividadesListaFechaVenc, .columnaActividadesListaTipo, .columnaActividadesListaEstado, .columnaEtiquetaModiPor, .columnaEtiquetaFechaModi,
+    .columnaConfiguracionEtiquetaModiPor, .columnaConfiguracionEtiquetaFechaModi, .columnaConfiguracionEtiquetaEstado,
+    .columnaUnidadComercialModiPor, .columnaUnidadComercialFechaModi, .columnaUnidadComercialEstado,
+    .columnaListaConfiguracionModiPor, .columnaListaConfiguracionFechaModi, .columnaListaConfiguracionEstado, .columnaListaConfiguracionTipoGestion,
+    .columnaFeriadoModiPor, .columnaFeriadoFechaModi, .columnaFeriadoEstado,
+    .columnaUbigeoFechaModi, .columnaUbigeoModiPor,
+    .columnaSedeEstado, .columnaSedeFechaModi, .columnaSedeModiPor,
+    .columnaSedeDistribucionEstado, .columnaSedeDistribucionFechaModi, .columnaSedeDistribucionModiPor,
+    .columnaAreaGestionEstado,
+    .columnaAsesorModiPor, .columnaAsesorFechaModi, .columnaAsesorEstado,
+    .columnaAsesorCalendarioModiPor, .columnaAsesorCalendarioFechaModi, .columnaAsesorCalendarioEstado,
+    .columnaProductoModiPor, .columnaProductoFechaModi, .columnaProductoEstado,
+    .columnaZonaGestionModiPor, .columnaZonaGestionFechaModi, .columnaZonaGestionEstado,
+    .columnaRolModiPor, .columnaRolFechaModi, .columnaRolEstado,
+    .columnaPermisoEstado, .columnaPermisoFechaModi, .columnaPermisoModiPor,
+    .columnaMenuEstado, .columnaMenuFechaModi, .columnaMenuModiPor,
+    .columnaUsuarioEstado, .columnaUsuarioFechaModi, .columnaUsuarioModiPor {
+        display: none;
+    }
+    .showClienteActCon, .showClienteActDet, .showClienteDireccion, .showClientePasCon, .showClientePasAh, .showClientePasPF, .showClientePasSeg,
+    .showClienteCanal, .showClienteReclaReque, .columnaProspec, .columnActividades, .columnaActividadesLista, .columnaEtiqueta,
+    .columnaConfiguracionEtiqueta, .columnaUnidadComercial, .columnaListaConfiguracion, .columnaFeriado, .columnaUbigeo,
+    .columnaSede, .columnaSedeDistribucion, .columnaAreaGestion, .columnaAsesor, .columnaAsesorCalendario, .columnaProducto,
+    .columnaZonaGestion, .columnaRol, .columnaPermiso, .columnaMenu, .columnaUsuario {
+        font-size: 8px;
+        width: 20% !important;
+    }
+    .showClientePasCon, .showClientePasAh {
+        font-size: 7px;
+    }
+    .editProspectoTipoPro {
+        width: 100% !important;
+    }
+    .showConfiguracionEtiquetaOrden, .editConfiguracionEtiquetaOrden {
+        width: 50% !important;
+    }
+    .showConfiguracionEtiquetaNombre, .showConfiguracionEtiquetaListaMarketing,
+    .showConfiguracionEtiquetaTipoActividad, .showConfiguracionEtiquetaObservacion,
+    .editConfiguracionEtiquetaListaMarketing, .editConfiguracionEtiquetaTipoActividad,
+    .editConfiguracionEtiquetaObservacion {
+        width: 90% !important;
+    }
+    .showConfiguracionEtiquetaObservacion, .editConfiguracionEtiquetaObservacion {
+        padding-left: 10px;
+    }
+    .editEtiquetaTipo, .editUnidadComercialEstado {
+        width: 100% !important;
+    }
+}

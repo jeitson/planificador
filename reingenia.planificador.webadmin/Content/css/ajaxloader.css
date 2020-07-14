@@ -1,0 +1,16 @@
+﻿.ajax-loader 
+{
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    z-index: +100 !important;
+    width: 82%;
+    height: 82%;
+}
+
+.ajax-loader img 
+{
+    position: relative;
+    top: 38%;
+    left: 50%;
+}
